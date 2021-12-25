@@ -1,0 +1,37 @@
+/*---Service Classes-----the use of existing styles--*/
+/* NEW Utility !!! should be first/higher in the document  */
+.list {
+  /* ressets all the things given/set by browser */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $title-color;
+}
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
