@@ -15,7 +15,7 @@
     flex-basis: calc(100% / 3 - #{$project-item-gap});
   }
   @media screen and (min-width: 1200px) {
-    flex-basis: calc(100% / 4 - #{$project-item-gap});
+    flex-basis: calc(100% / 6 - #{$project-item-gap});
   }
 
   border: 1px solid $social-network-main-color;
