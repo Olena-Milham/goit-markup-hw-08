@@ -1,12 +1,23 @@
 /* OUR CLIENTS  */
 .clients__list {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * #{$project-item-gap});
+  margin-top: calc(-1 * #{$project-item-gap});
 }
 .clients__item {
-  width: 170px;
+  margin-left: $project-item-gap;
+  margin-top: $project-item-gap;
   height: 92px;
+  flex-basis: calc(100% / 2 - #{$project-item-gap});
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - #{$project-item-gap});
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - #{$project-item-gap});
+  }
+
   border: 1px solid $social-network-main-color;
   border-radius: 4px;
   transition: border 250ms $timing-function;

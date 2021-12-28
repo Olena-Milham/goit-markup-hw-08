@@ -4,10 +4,14 @@
 }
 
 .team__list {
-  display: flex;
-  /* flex-wrap: wrap; */
   margin-left: calc(-1 * #{$project-item-gap});
   margin-top: calc(-1 * #{$project-item-gap});
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: center;
+  }
 }
 
 .team__card {
@@ -21,6 +25,11 @@
   border-radius: 4px;
   margin-top: $project-item-gap;
   margin-left: $project-item-gap;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - #{$project-item-gap});
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - #{$project-item-gap})
 }
 .team__person {
   margin-top: 0px;
