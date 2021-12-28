@@ -314,25 +314,55 @@ img {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section-title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
 }
+@media screen and (min-width: 768px) {
+  .section-title {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
 
 .section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 /* --------------------------------Header--------------------------------------------- */
@@ -340,8 +370,13 @@ img {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
   max-width: 1600px;
-  height: 80px;
+  height: 60px;
   margin: 0 auto;
+}
+@media screen and (min-width: 760px) {
+  .header {
+    height: 80px;
+  }
 }
 
 .nav-holder {
@@ -529,18 +564,20 @@ img {
 }
 
 .projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin-left: calc(-1 * 30px);
   margin-top: calc(-1 * 30px);
 }
+@media screen and (min-width: 768px) {
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 
 .projects__item {
-  -ms-flex-preferred-size: calc(100% / 3 - 30px);
-      flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
   outline: 1px solid #eeeeee;
@@ -549,18 +586,28 @@ img {
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* overflow: hidden; */
-  /* при ховере на projects-item примени на ..description эти стили */
 }
-.projects__item:hover {
+@media screen and (min-width: 768px) {
+  .projects__item {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+.projects__link {
+  display: block;
+}
+.projects__link:hover, .projects__link:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.projects__item:focus {
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.projects__item:hover .projects__item-description, .projects__item:focus .projects__item-description {
+.projects__link:hover.projects__item-description, .projects__link:focus .projects__item-description {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
