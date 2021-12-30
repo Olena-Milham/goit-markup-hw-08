@@ -31,6 +31,24 @@
             <span class="header__web" lang="en">Web</span>
             <span class="header__studio" lang="en">Studio</span>
           </a>
+          <button type="button" class="menu-button is-open" data-menu-button>
+            <svg
+              width="40"
+              height="40"
+              aria-expanded="false"
+              aria-lable="Переключатель мобильного меню"
+            >
+              <use
+                class="icon-cross"
+                href="./images/decore/icons.svg#icon-close"
+              ></use>
+              <use
+                class="icon-menu"
+                href="./images/decore/icons.svg#icon-email"
+              ></use>
+            </svg>
+          </button>
+          <div class="header__menu-container">Content menu</div>
           <ul class="header__list list">
             <li class="header__item">
               <a class="header__link link underline" href="">Студия</a>
@@ -608,5 +626,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

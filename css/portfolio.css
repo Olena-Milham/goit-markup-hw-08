@@ -312,6 +312,7 @@ img {
 }
 
 .container {
+  width: 320px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -420,6 +421,20 @@ img {
 
 .header__studio {
   color: #000000;
+}
+
+.header__mobile-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.header__mobile-button.icon-cross {
+  display: none;
 }
 
 .header__list {
