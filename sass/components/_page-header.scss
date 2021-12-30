@@ -1,6 +1,6 @@
 /* --------------------------------Header--------------------------------------------- */
 .header {
-   position: relative;
+  position: relative;
   background-color: $header-color;
   border-bottom: 1px solid #ececec;
   max-width: 1600px;
@@ -19,7 +19,6 @@
   // justify-content: flex-end;
 
   .header__navigation {
-   
     display: flex;
     /* выравниваем относительно поперечной оси, то есть высоты*/
     align-items: center;
@@ -66,94 +65,144 @@
   .menu-button .is-open .icon-menu {
     display: none;
   }
-  .header__menu-container{
-    position: absolute;
-    top: 100%;
-    left:0;
-    width:100%;
+
+  .menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .menu-container {
+    // position: absolute;
+    // top: 100%;
+    // left:0;
+    // width:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: $secondary-background-color;
     padding: 48px 40px;
     text-align: center;
     font-size: 40px;
-
+    z-index: 999;
+    // hide
+    transform: translateX(100%);
+    transition: transform 250ms var($timing-function);
   }
-  .header__list {
-    display: flex;
-    margin-left: 93px;
+  .menu-container .is-open {
+    transform: translateX(0);
   }
 
-  /* очистка крайней геометрии: один из вариантов .header-item: last child {
+  // their menu
+  // .mobile-menu{
+}
+
+// menu
+.header__list {
+  display: flex;
+  margin-left: 93px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+/* очистка крайней геометрии: один из вариантов .header-item: last child {
   margin-right: 0;/* .header-item+header-item{
   margin-left: 40px; или как я сделала  */
-  .header__item:not(:last-child) {
-    margin-right: 40px;
-  }
+.header__item:not(:last-child) {
+  margin-right: 40px;
+}
 
-  /* ссылка - строчный элемент, чтобы работали паддинги, надо сделать ее блочной или строчно-блочной, но там тогда зазор справа */
-  .header__link {
-    /* geometry */
+/* ссылка - строчный элемент, чтобы работали паддинги, надо сделать ее блочной или строчно-блочной, но там тогда зазор справа */
+.header__link {
+  /* geometry */
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* font + stiles  */
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $title-color;
+  /* decore */
+  position: relative;
+  transition: color 250ms $timing-function;
+  &:hover,
+  &:focus {
+    color: $main-accent-color;
+  }
+  &.underline::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: $main-accent-color;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+// contacts
+
+.header__contacts-list {
+  margin-left: auto;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    /* font + stiles  */
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: $title-color;
-    /* decore */
-    position: relative;
-    transition: color 250ms $timing-function;
-    &:hover,
-    &:focus {
-      color: $main-accent-color;
-    }
-    &.underline::after {
-      content: "";
-      width: 100%;
-      height: 4px;
-      background-color: $main-accent-color;
-      border-radius: 2px;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
   }
+}
 
-  .header__contacts-list .link {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: $main-text-color;
-    &.link:hover,
-    &.link:focus {
-      color: $main-accent-color;
-    }
-  }
-
-  .header__contacts-list {
-    display: flex;
-    margin-left: auto;
-  }
-
-  .header__contacts {
-    /* padding-top: 32px;
+.header__contacts {
+  /* padding-top: 32px;
   padding-bottom: 32px; */
-    display: flex;
-    align-items: center;
-    & + & {
-      margin-left: $project-item-gap;
-    }
+  display: flex;
+  align-items: center;
+  & + & {
+    margin-left: $project-item-gap;
   }
+}
+.header__contacts-list .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $main-text-color;
+  &.link:hover,
+  &.link:focus {
+    color: $main-accent-color;
+  }
+}
 
-  .header__mail,
-  .header__tel {
-    transition: color 250ms $timing-function;
-  }
-  .header__icon {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-    fill: currentColor;
-  }
+.header__mail,
+.header__tel {
+  transition: color 250ms $timing-function;
+}
+.header__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: currentColor;
+}
