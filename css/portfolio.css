@@ -489,6 +489,17 @@ img {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
+.nav-holder .mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.nav-holder .mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
 
 .header__list {
   display: -webkit-box;
