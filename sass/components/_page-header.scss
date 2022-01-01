@@ -1,9 +1,10 @@
 /* --------------------------------Header--------------------------------------------- */
 .header {
   position: relative;
+  width: 100%;
   background-color: $header-color;
   border-bottom: 1px solid #ececec;
-  max-width: 1600px;
+  // max-width: 1600px;
   height: 60px;
   @media screen and (min-width: 760px) {
     height: 80px;
@@ -44,94 +45,14 @@
     color: $logo-color;
   }
 
-  // .menu-button {
-  //   display: inline-flex;
-  //   margin: 0;
-  //   padding: 0;
-  //   border: none;
-  //   background-color: transparent;
-}
-
-// take the cross from the flow
-// .menu-button .icon-cross {
-//   display: none;
-// }
-
-// when mobile-button is open make icon-cross to be a block
-// .menu-button .is-open .icon-cross {
-//   display: block;
-// }
-
-// .menu-button .is-open .icon-menu {
-//   display: none;
-// }
-
-.menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  outline: none;
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.menu-container {
-  // position: absolute;
-  // top: 100%;
-  // left:0;
-  // width:100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: $secondary-background-color;
-  padding: 48px 40px;
-  text-align: center;
-  font-size: 40px;
-  z-index: 999;
-  // hide
-  transform: translateX(100%);
-  transition: transform 250ms var($timing-function);
-}
-.menu-container .is-open {
-  transform: translateX(0);
-}
-
-// their menu
-//  .mobile-menu {
-//   padding: 0;
-//   margin: 0;
-//   list-style: none;
-// }
-
-// .mobile-menu .link {
-//   display: block;
-//   padding: 10px;
-//   color: #fff;
-//   text-decoration: none;
-// }
-
-// menu
-.header__list {
-  display: flex;
-  margin-left: 93px;
-  @media screen and (max-width: 767px) {
-    display: none;
+ 
+.header__list .list {
+  display: none;
+  // display: flex;
+  // margin-left: 93px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 93px;
   }
 }
 
