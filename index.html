@@ -15,18 +15,42 @@
   </head>
 
   <body class="header-container">
-    <!-- The top of the site - header  -->
-    <!-- <header class="header">
+    <!--  The top of the site - header  -->
+    <header class="header">
       <div class="container nav-holder">
-        <nav class="header__navigation">
+        <div class="header__logo-wrap">
           <a class="header__logo link" href="/">
             <span class="header__web" lang="en">Web</span>
             <span class="header__studio" lang="en">Studio</span>
           </a>
 
-         
           <button
-            class="menu-button open-menu-btn"
+            class="menu-button js-open-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-open
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-lable="Переключатель мобильного меню"
+            >
+              <use
+                class="icon-menu"
+                href="./images/decore/icons.svg#icon-menu"
+              ></use>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          class="menu-container js-menu-container"
+          id="menu-container"
+          data-menu
+        >
+          <button
+            class="menu-button menu-button__close js-close-menu"
             type="button"
             aria-expanded="false"
             aria-controls="menu-container"
@@ -41,15 +65,11 @@
                 class="icon-cross"
                 href="./images/decore/icons.svg#icon-close-menu"
               ></use>
-              <use
-                class="icon-menu"
-                href="./images/decore/icons.svg#icon-menu"
-              ></use>
             </svg>
           </button>
-         
-          <div class="menu-container" id="menu-container" data-menu>
-            <div class="navigation">
+
+          <div class="navigation">
+            <nav class="header__navigation">
               <ul class="header__list list">
                 <li class="header__item">
                   <a class="header__link link underline" href="">Студия</a>
@@ -63,53 +83,51 @@
                   <a class="header__link link" href="">Контакты</a>
                 </li>
               </ul>
-            </div>
-            <div class="contacts">
-              <ul class="header__contacts-list list">
-                <li class="header__contacts">
-                  <a
-                    class="header__mail link"
-                    href="mailto:info@devstudio.com "
-                  >
-                    <svg class="header__icon" width="16" height="12">
-                      <use href="./images/decore/icons.svg#icon-envelope"></use>
-                    </svg>
-                    info@devstudio.com
-                  </a>
-                </li>
-                <li class="header__contacts">
-                  <a class="header__tel link" href="tel:+380961111111">
-                    <svg class="header__icon" width="10" height="16">
-                      <use href="./images/decore/icons.svg#icon-tel"></use>
-                    </svg>
-                    +38 096 111 11 11
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="social">
-              <ul class="mobile__social-list list">
-                <li class="mobile__social-item">
-                  <a href="" class="mobile__social-link link"> Instagram </a>
-                </li>
-                <li class="mobile__social-item">
-                  <a href="" class="mobile__social-link link"> Twitter </a>
-                </li>
-                <li class="mobile__social-item">
-                  <a href="" class="mobile__social-link link"> Facebook </a>
-                </li>
-                <li class="mobile__social-item">
-                  <a href="" class="mobile__social-link link"> LinkedIn </a>
-                </li>
-              </ul>
-            </div>
+            </nav>
+
+            <!-- <div class="contacts"> -->
+            <ul class="header__contacts-list list">
+              <li class="header__contacts">
+                <a class="header__mail link" href="mailto:info@devstudio.com ">
+                  <svg class="header__icon" width="16" height="12">
+                    <use href="./images/decore/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="header__contacts">
+                <a class="header__tel link" href="tel:+380961111111">
+                  <svg class="header__icon" width="10" height="16">
+                    <use href="./images/decore/icons.svg#icon-tel"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+            <!-- </div> -->
+            <!-- <div class="social"> -->
+            <ul class="mobile__social-list list">
+              <li class="mobile__social-item">
+                <a href="" class="mobile__social-link link"> Instagram </a>
+              </li>
+              <li class="mobile__social-item">
+                <a href="" class="mobile__social-link link"> Twitter </a>
+              </li>
+              <li class="mobile__social-item">
+                <a href="" class="mobile__social-link link"> Facebook </a>
+              </li>
+              <li class="mobile__social-item">
+                <a href="" class="mobile__social-link link"> LinkedIn </a>
+              </li>
+            </ul>
+            <!-- </div> -->
           </div>
-        </nav>
+        </div>
       </div>
-    </header> -->
+    </header>
 
     <!-- REPETA'S HEADER -->
-    <header class="page-header">
+    <!-- <header class="page-header">
       <div class="container">
         <button
           class="menu-toggle js-open-menu"
@@ -144,10 +162,9 @@
           </li>
         </ul>
       </div>
-    </header>
+    </header> -->
 
-   
-      <!-- <ul class="mobile-contacts">
+    <!-- <ul class="mobile-contacts">
     <li class="header__contacts">
       <a class="header__mail link" href="mailto:info@devstudio.com ">
         <svg class="header__icon" width="16" height="12">
@@ -179,7 +196,7 @@
       <a href="" class="mobile__social-link link"> LinkedIn </a>
     </li>
   </ul> -->
-    </div>
+    <!-- </div> -->
 
     <!-- the main and unique content of the page -->
     <main>
@@ -725,8 +742,8 @@
         </div>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
-    <!-- MENU -->
+
+    <!-- MENU
      <div class="menu-container js-menu-container" id="mobile-menu">
       <button class="menu-toggle js-close-menu">
        <svg
@@ -754,7 +771,8 @@
         <li class="header__item">
           <a class="header__link link" href="">Контакты</a>
         </li>
-      </ul>
+      </ul> -->
+    <script src="./js/modal.js"></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
