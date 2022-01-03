@@ -366,7 +366,6 @@ img {
   }
 }
 
-/* --------------------------------Header--------------------------------------------- */
 .header {
   width: 100%;
   background-color: #ffffff;
@@ -398,8 +397,9 @@ img {
     padding-bottom: 25px;
   }
 }
+
 @media screen and (min-width: 768px) {
-  .header .nav-holder {
+  .nav-holder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -408,11 +408,13 @@ img {
             align-items: center;
   }
 }
-.header .header__logo-wrap {
+
+/* --------------------------------Header--------------------------------------------- */
+.header__logo-wrap {
   display: none;
 }
 @media screen and (max-width: 767px) {
-  .header .header__logo-wrap {
+  .header__logo-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -421,7 +423,8 @@ img {
             align-items: center;
   }
 }
-.header .header__logo {
+
+.header__logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -431,7 +434,7 @@ img {
   word-spacing: -6px;
 }
 @media screen and (min-width: 1200px) {
-  .header .header__logo {
+  .header__logo {
     font-size: 26px;
     line-height: 1.19;
     word-spacing: -6px;
@@ -727,6 +730,140 @@ img {
   .mobile__social-link {
     display: none;
   }
+}
+
+/* --------------------------------Header--------------------------------------------- */
+.page__navigation {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .page__navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* выравниваем относительно поперечной оси, то есть высоты*/
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /*растягиваем по нужным сторонам  */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.page__logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  word-spacing: -6px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.page__web {
+  color: #2196f3;
+}
+
+.page__studio {
+  color: #000000;
+}
+
+.page__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 93px;
+}
+
+/* очистка крайней геометрии: один из вариантов .header-item: last child {
+  margin-right: 0;/* .header-item+header-item{
+  margin-left: 40px; или как я сделала  */
+.header__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+/* ссылка - строчный элемент, чтобы работали паддинги, надо сделать ее блочной или строчно-блочной, но там тогда зазор справа */
+.page__link {
+  /* geometry */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* font + stiles  */
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #212121;
+  /* decore */
+  position: relative;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page__link:hover, .page__link:focus {
+  color: #2196f3;
+}
+.page__link.underline::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.page__contacts-list .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+  display: none;
+}
+.page__contacts-list .link.link:hover, .page__contacts-list .link.link:focus {
+  color: #2196f3;
+}
+@media screen and (min-width: 768px) {
+  .page__contacts-list .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+.header__contacts {
+  /* padding-top: 32px;
+  padding-bottom: 32px; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__contacts + .header__contacts {
+  margin-left: 30px;
+}
+
+.page__mail,
+.page__tel {
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* --------------------------Heroe/ Banner/ order a service ------------------------------------------------ */

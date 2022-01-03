@@ -1,0 +1,126 @@
+/* --------------------------------Header--------------------------------------------- */
+
+// .page__holder {
+//   display: flex;
+//   align-items: center;
+// }
+
+// ............
+
+.page__navigation {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    /* выравниваем относительно поперечной оси, то есть высоты*/
+    align-items: center;
+    /*растягиваем по нужным сторонам  */
+    justify-content: center;
+  }
+}
+
+.page__logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  word-spacing: -6px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.page__web {
+  color: $main-accent-color;
+}
+.page__studio {
+  color: $logo-color;
+}
+
+.page__list {
+  display: flex;
+  margin-left: 93px;
+}
+
+/* очистка крайней геометрии: один из вариантов .header-item: last child {
+  margin-right: 0;/* .header-item+header-item{
+  margin-left: 40px; или как я сделала  */
+.header__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+/* ссылка - строчный элемент, чтобы работали паддинги, надо сделать ее блочной или строчно-блочной, но там тогда зазор справа */
+.page__link {
+  /* geometry */
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* font + stiles  */
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $title-color;
+  /* decore */
+  position: relative;
+  transition: color 250ms $timing-function;
+  &:hover,
+  &:focus {
+    color: $main-accent-color;
+  }
+  &.underline::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: $main-accent-color;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.page__contacts-list .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $main-text-color;
+  &.link:hover,
+  &.link:focus {
+    color: $main-accent-color;
+  }
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+// .page__contacts-list {
+//   display: none;
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     margin-left: auto;
+//   }
+// }
+
+.header__contacts {
+  /* padding-top: 32px;
+  padding-bottom: 32px; */
+  display: flex;
+  align-items: center;
+  & + & {
+    margin-left: $project-item-gap;
+  }
+}
+
+.page__mail,
+.page__tel {
+  transition: color 250ms $timing-function;
+}
+.header__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: currentColor;
+}
