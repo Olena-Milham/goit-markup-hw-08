@@ -3,7 +3,9 @@
 @import "./utils/breakpoints";
 @import "./base/reset";
 @import "./utils/extend";
-@import "./components/page-header";
+@import "./components/header-general";
+@import "./components/header-mobile";
+@import "./components/header-page";
 @import "./components/filters";
 @import "./components/projects";
 @import "./components/page-footer";
