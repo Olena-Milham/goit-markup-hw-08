@@ -278,6 +278,10 @@ body {
   color: #757575;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /* general reset of styles to do less work in each section  */
 h1,
 h2,

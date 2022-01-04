@@ -11,6 +11,9 @@ body {
   letter-spacing: 0.03em;
   color: $main-text-color;
 }
+body.modal-open {
+  overflow: hidden;
+}
 /* general reset of styles to do less work in each section  */
 h1,
 h2,
