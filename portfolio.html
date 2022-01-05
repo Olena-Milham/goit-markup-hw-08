@@ -57,12 +57,12 @@
           </a>
           <ul class="page__list list">
             <li class="page__item">
-              <a class="page__link link underline" href="./index.html"
-                >Студия</a
-              >
+              <a class="page__link link" href="./index.html">Студия</a>
             </li>
             <li class="page__item">
-              <a class="page__link link" href="./portfolio.html">Портфолио</a>
+              <a class="page__link link underline" href="./portfolio.html"
+                >Портфолио</a
+              >
             </li>
             <li class="page__item">
               <a class="page__link link" href="">Контакты</a>
@@ -120,10 +120,14 @@
                 <div class="projects__overlay">
                   <img
                     class="projects__img"
-                    src="./images/portfolio-section/portfolio1.jpg"
+                    src="./images/portfolio-section/portfolio1-450.jpg"
                     alt="компьютер с открытым веб-сайтом"
-                    width="370"
-                    height="294"
+                    width="450"
+                    srcset="
+                      ./images/portfolio1-450.jpg  1x,
+                      ./images/portfolio1-900.jpg  2x,
+                      ./images/portfolio1-1350.jpg 3x
+                    "
                   />
                   <div class="projects__item-description">
                     <p class="projects__item-text">
