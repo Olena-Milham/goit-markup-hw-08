@@ -294,7 +294,7 @@ p {
   padding: 0;
 }
 
-/* свойства для корректного отображения картинок */
+/* свойства для корректного отображения картинок  max-width=100% of its own original size*/
 img {
   display: block;
   max-width: 100%;
