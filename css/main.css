@@ -404,7 +404,7 @@ img {
             justify-content: space-between;
   }
 }
-@media screen and (min-width: 12000px) {
+@media screen and (min-width: 1200px) {
   .nav-holder {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -852,7 +852,6 @@ img {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 696px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -860,10 +859,16 @@ img {
   text-transform: uppercase;
   color: #ffffff;
 }
+@media screen and (min-width: 480px) {
+  .order-service__title {
+    width: 360px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .order-service__title {
     font-size: 44px;
     line-height: 1.36;
+    width: 696px;
   }
 }
 
