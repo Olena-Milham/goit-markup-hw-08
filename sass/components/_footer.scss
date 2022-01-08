@@ -7,8 +7,11 @@
 .footer-links {
   display: block;
   @media screen and (min-width: 1200px) {
-    display: flex;
+    // display: flex;
     // align-items: baseline;
+    // text-align: start;
+    display: flex;
+    align-items: baseline;
     justify-content: space-between;
   }
 }
@@ -42,7 +45,7 @@
   @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.19;
-    // text-align: left;
+    text-align: left;
   }
   letter-spacing: 0.03em;
   /*------add negative word-spacing to bring letters together----------*/
@@ -58,9 +61,9 @@
 .footer__contacts {
   display: block;
   text-align: center;
-  // @media screen and (min-wdth: 1200px) {
-  //   text-align: left;
-  // }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 .footer__contact-item:not(:last-child) {
   margin-bottom: 8px;
@@ -154,7 +157,7 @@
 
   color: $main-title-color;
   @media screen and (min-width: 1200px) {
-    text-align: left;
+    text-align: start;
   }
 }
 .footer__email-send {
