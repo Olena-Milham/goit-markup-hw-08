@@ -7,9 +7,6 @@
 .footer-links {
   display: block;
   @media screen and (min-width: 1200px) {
-    // display: flex;
-    // align-items: baseline;
-    // text-align: start;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -45,7 +42,7 @@
   @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.19;
-    text-align: left;
+    text-align: start;
   }
   letter-spacing: 0.03em;
   /*------add negative word-spacing to bring letters together----------*/
@@ -107,7 +104,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   @media screen and (min-width: 1200px) {
-    text-align: left;
+    text-align: start;
   }
 }
 .footer__social-list {
