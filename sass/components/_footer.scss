@@ -1,12 +1,49 @@
-/* --------------Footer--------------------------- */
 .footer {
   background-color: $footer-color;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-/*-------------- contact links------------------- */
+.footer-links {
+  display: block;
+}
 
+// ...........................
+
+.footer__address {
+  display: block;
+  margin-bottom: 60px;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+  //   margin-left: 148px;
+  text-align: center;
+
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  /*------add negative word-spacing to bring letters together----------*/
+  word-spacing: -5px;
+}
+.footer__web {
+  color: $main-accent-color;
+}
+.footer__studio {
+  color: $main-title-color;
+}
+
+.footer__contacts {
+  display: block;
+  text-align: center;
+}
+.footer__contact-item:not(:last-child) {
+  margin-bottom: 8px;
+}
 .footer__address-link {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -21,57 +58,15 @@
     color: $main-title-color;
   }
 }
-
-/*-------------------logo--------------------------*/
-.footer__logo {
-  display: inline-block;
-  margin-bottom: 20px;
-
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  /*------add negative word-spacing to bring letters together----------*/
-  word-spacing: -5px;
-}
-.footer__contact-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-.footer__web {
-  color: $main-accent-color;
-}
-.footer__studio {
-  color: $main-title-color;
-}
-
-/* --------------- */
-.footer-links {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
-.footer__address {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer__contacts {
-  display: flex;
-  flex-direction: column;
-}
-/* ---- */
+// .....................................
 
 .footer-social {
-  display: flex;
-  flex-direction: column;
-  /* margin-left: 70px; */
-  /* padding-top: 12px; */
+  display: block;
+  margin-bottom: 60px;
 }
 .footer__social-title {
   margin-bottom: 20px;
+  text-align: center;
   color: $main-title-color;
   font-weight: bold;
   font-size: 14px;
@@ -81,8 +76,9 @@
 }
 .footer__social-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .footer__social-item {
   width: 44px;
   height: 44px;
@@ -111,17 +107,12 @@
 .footer__social-icon {
   fill: currentColor;
 }
-
-/* ----------------------footer--email--form--------------- */
-
-.footer__email-send {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// .....................................
 
 .footer__email-title {
   margin-bottom: 20px;
+  //   margin-left: 116px;
+  text-align: center;
 
   font-weight: 700;
   font-size: 14px;
@@ -131,9 +122,15 @@
 
   color: $main-title-color;
 }
+.footer__email-send {
+  display: block;
+}
 .footer__email-input {
-  width: 358px;
+  min-width: 310px;
+  max-width: 450px;
+  width: 100%;
   height: 50px;
+  margin-bottom: 20px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -157,7 +154,6 @@
     color: rgba(255, 255, 255, 0.6);
   }
 }
-
 .footer__btn {
   display: flex;
   align-items: center;
@@ -180,7 +176,7 @@
   border-color: transparent;
   transition: box-shadow 250ms $timing-function;
 
-  margin-left: 12px;
+  margin: 0 auto;
   background-color: $second-button-color;
   &:focus,
   &:hover {
