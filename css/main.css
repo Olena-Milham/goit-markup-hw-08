@@ -1542,7 +1542,10 @@ img {
 }
 @media screen and (max-width: 767px) {
   .backdrop {
-    padding: 93px 15px;
+    padding-top: 93px;
+    padding-right: 15px;
+    padding-bottom: 94px;
+    padding-left: 15px;
   }
 }
 
@@ -1560,7 +1563,8 @@ img {
 
 .modal {
   width: 100%;
-  min-width: 320px;
+  min-width: 290px;
+  max-width: 450px;
   background-color: #ffffff;
   border-radius: 4px;
   padding: 40px 40px;
@@ -1628,25 +1632,33 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .modal__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 12px;
 }
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
+}
 
 .modal__form {
-  width: 370px;
+  min-width: 210px;
+  max-width: 370px;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .modal__form {
-    width: 448px;
+    min-width: 448px;
+    width: 100%;
   }
 }
 
@@ -1737,7 +1749,9 @@ textarea {
   resize: none;
   padding: 12px 16px;
   border-radius: 4px;
-  width: 370px;
+  min-width: 210px;
+  max-width: 370px;
+  width: 100%;
   min-height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1745,7 +1759,8 @@ textarea {
 }
 @media screen and (min-width: 1200px) {
   textarea {
-    width: 448px;
+    width: 100%;
+    min-width: 448px;
   }
 }
 
@@ -1756,22 +1771,24 @@ textarea {
 
 /* ---------------------custom checkbox-------------------- */
 .form__checkbox {
-  /* outline: 1px solid teal; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 370px;
+  min-width: 210px;
+  max-width: 370px;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 20px 11px 30px 14px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .form__checkbox {
-    width: 425px;
+    min-width: 425px;
+    width: 100%;
   }
 }
 
@@ -1855,7 +1872,6 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /* margin-bottom: 40px; */
 }
 
 .form-send__btn {
