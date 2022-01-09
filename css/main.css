@@ -1319,6 +1319,7 @@ img {
             flex-direction: column;
     margin-bottom: 0;
     margin-left: 70px;
+    padding-top: 15px;
   }
 }
 
@@ -1383,6 +1384,10 @@ img {
 
 .footer__social-icon {
   fill: currentColor;
+}
+
+.footer-form {
+  padding-top: 12px;
 }
 
 .footer__email-title {
